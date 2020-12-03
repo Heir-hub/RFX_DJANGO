@@ -1,0 +1,1 @@
+web: gunicorn RFX_project.wsgi --log-file -

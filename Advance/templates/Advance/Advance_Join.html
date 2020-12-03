@@ -1,0 +1,97 @@
+{% extends 'RFX/base.html' %}
+{% load static %}
+
+{% block content %}
+
+ 
+  <section class="home-slider js-fullheight owl-carousel">
+        <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/join2.jpg' %} );">
+            <div class="overlay"></div>
+              <div class="container">
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+                    <div class="text">
+                        <div class="subheading">
+                            <span>RFX Institute</span>
+                        </div>
+                      <h1 class="mb-4">Rehoboth <span>Forex</span> Institute</h1>
+                      <p>...Charting the wealth in you </p>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </section> 
+
+
+
+
+
+
+
+
+
+
+<div class="body">
+     
+      
+    <section class="ftco-section ftco-services-2" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5 ">
+                <div class="col-md-8 heading-section text-center ftco-animate">
+                    <span class="subheading">Join</span>
+                    <h2 class="mb-4">Become An Apprentice</h2>
+                  
+                      
+      <div class="row justify-content-center pb-5 ">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+            
+            <div class="block-18 text-center py-5">
+                <div class="text">
+                        <div class="pricingTable orange">
+                            <div class="pricingTable-header">
+                                <span class="heading">
+                                    <h3>Advance Level</h3>
+                                </span>
+                                <span class="price-value">$200 <span class="month"></span> <span></span><span>Your Course Outline</span></span>
+                            </div>
+                            <div class="pricingContent">
+                                <i class="fa fa-cube"></i>
+                                <ul>
+                                    <li>Market Cycle</li>
+                                    <li>Market Order:Order/Breaker blocks</li>
+                                    <li>Liquidity Concepts</li>
+                                    <li>Volume Concepts</li>
+                                    <li>Discount and Premium Prices</li>
+                                     <li>Traders'Dynamic Index</li>
+                                      <li>Other IOF Concepts</li>
+                                      <li>Trading Psychology(Risk and Money Management)</li>
+                                </ul>
+                            </div><!--price content-->    
+                            <p> <a href="{% url 'advance-register' %} " class="btn btn-primary btn-outline-primary py-2 px-4 mb-4">Proceed</a></p>
+       
+                      </div><!--price-->   
+                  </div><!--text-->   
+              
+              </div><!--block-->   
+          
+            </div><!--col-->      
+       
+       
+          </div><!--row-->
+       </div><!--container-->
+    </section>
+		
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+</div>

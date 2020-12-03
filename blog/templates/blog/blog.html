@@ -1,0 +1,121 @@
+{% extends 'RFX/base.html' %}
+{% load static %}
+{% block content %}
+
+
+	  <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/setup.jpg' %} );">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class="mb-4">We Give an Accurate <span>signal</span></h1>
+		            <p>Our Trade Analysis Is Top Notch</p>
+		                <a href="#blog-section" class="btn btn-primary btn-outline-primary py-2 px-4">Explore now</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+
+
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/setup.png' %} );">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class="mb-4">We also Love Blue <span>Pips</span></h1>
+		            <p>Our  Setups  Give  95%  Profits</p>
+		            <a href="#blog-section" class="btn btn-primary btn-outline-primary py-2 px-4">Explore now</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+
+
+    </section>
+
+	 
+
+    <section class="ftco-section bg-light" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">Blog</span>
+            <h2 class="mb-4">Read the Latest Blog</h2>
+           
+          </div>
+        </div>
+        <div class="row d-flex">
+        {% for post in posts %}
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+                    <p>
+                              {% if post.Image %}
+                        <img src="{{ post.Image.url}}" alt="" class="img-fluid">
+                              {% endif %}
+                      </p>
+              <div class="text float-right d-block">
+              	<div class="d-flex align-items-center pt-2 mb-4 topp">
+              		
+              		<div class="two">
+              			
+              			<span class="mos">{{post.date|date:"F d,Y"}}</span>
+              		</div>
+              	</div>
+                <h3 class="heading"><a href="single.html">{{post.title}}</a></h3>
+                <p>{{ post.content| slice:":100"|safe}}</p>
+                <div class="d-flex align-items-center mt-4 meta">
+	                <p class="mb-0"><a href="{% url 'post-detail' post.id  %}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">{{post.author}}</a>
+	                	<a href="https://wa.me/23408163540049?text=%20Hello%20%20sir%20my%20name%20is" class="meta-chat"><span class="icon-whatsapp"></span></a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          </div>
+      </section>    
+
+
+  {% if is_paginated %}
+
+     {% if page_obj.has_previous %}
+     
+        <a  class=" btn   badge-primary badge-pill" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+      
+          {% for num in page_obj.paginator.page_range %}
+            {%  if page_obj.number == num %}
+              <a  class="btn  badge-primary badge-pill" href="?page={{ num }}">{{ num }}</a>
+            {% elif num  > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+              <a  class="btn  badge-primary badge-pill" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}    
+          {% endfor %}
+
+          {% if page_obj.has_previous %}
+            <a  class="btn   badge-primary badge-pill" href="?page={{ page_obj.next_page_number }}">Next</a>
+           
+         {% endif %}
+
+  {% endif  %}
+
+
+
+
+
+
+{% endblock content %}
+
+

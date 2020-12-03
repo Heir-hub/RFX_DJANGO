@@ -1,0 +1,106 @@
+{% extends 'RFX/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    
+	  <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/start.jpg' %} );">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		      <h1 class="mb-3 bread">Welcome to the <span>Beginner</span> Section</h1>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+
+
+          <section class="ftco-section ftco-causes ftco-no-pb" id="causes-section" >
+            <div class="container">
+              <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                  <span class="subheading">Beginner Tutorials</span>
+                  <h2 class="mb-5">We believe in your growth</h2>
+                  <p>Value your process over outcome,with good process result is inevitable</p>
+                </div>
+              </div>
+              <div class="row">
+                {% for tutorial  in tutorials  %}
+            
+                <div class="col-md-6 col-lg-6">
+                  <div class="cause-entry ftco-animate">
+                    <video class="embeded-responsive embeded-responsive-16by9 card-img-top" width="500px" height="500px" controls="controls" id="controls">
+                      <source id="video" src="{{ tutorial.videos.url }}" type="video/mp4">
+                      </video>
+
+                    <div class="text p-3">
+                      <h3  class="badge text-white badge-primary badge-pill">{{tutorial.title}}</h3>
+                      <p>{{tutorial.content}}</p>
+                      <div class="progress mb-4">
+                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                        <span>A 100% growth is possible</span>
+                        </div>
+                    </div>
+                      <p class="donate"><span class="price">{{ tutorial.author}}</span> <span class="target-goal">on</span> / <span class="price">{{tutorial.date|date:"F d,Y"}}</span> <span class="target-goal"></span></p>
+                
+                
+                    </div>
+                    
+                  </div>
+                </div>  
+                {% endfor %}  
+              </div>
+                
+            
+        </section>		
+
+
+
+
+
+  {% if is_paginated %}
+
+     {% if page_obj.has_previous %}
+     
+        <a  class=" btn   badge-primary badge-pill" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+      
+          {% for num in page_obj.paginator.page_range %}
+            {%  if page_obj.number == num %}
+              <a  class="btn  badge-primary badge-pill" href="?page={{ num }}">{{ num }}</a>
+            {% elif num  > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+              <a  class="btn  badge-primary badge-pill" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}    
+          {% endfor %}
+
+          {% if page_obj.has_previous %}
+            <a  class="btn   badge-primary badge-pill" href="?page={{ page_obj.next_page_number }}">Next</a>
+           
+         {% endif %}
+
+  {% endif  %}
+
+
+
+
+
+
+
+
+
+  
+
+{% endblock content %}

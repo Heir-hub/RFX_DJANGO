@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Rehobth fx Institute</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'RFX/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'RFX/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'RFX/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'RFX/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'RFX/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'RFX/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'RFX/css/ionicons.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'RFX/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'RFX/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'RFX/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'RFX/images/Rfx_logo.png'%}" type="image/x-icon">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{% url 'home-section' %}"><span><img src="{% static 'RFX/images/Rfx_logo.png'%}" class="logo"></span></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button> 
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto ">
+	          <li class="nav-item"><a href="{% url 'home-section' %}" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#events-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#causes-section" class="nav-link"><span>Our Goal</span></a></li>
+            <li class="nav-item"><a href="{% url 'blog-home' %}" class="nav-link"><span>Blog</span></a></li>
+
+
+                	<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Tutorials</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                          <a class="dropdown-item" href="{% url 'Beginner-join' %}">Beginner</a>
+                          <a class="dropdown-item" href="{% url 'Intermediate-join' %}">Intermediate</a>
+                          <a class="dropdown-item" href="{% url 'Advance-join' %}">Advance Level</a>
+                        </div>
+                   </li>
+
+
+
+
+
+
+
+	          <li class="nav-item"><a href="#pastor-section" class="nav-link"><span>Contact</span></a></li>
+	       
+                {% if user.is_authenticated %}
+           <li class="nav-item"><a href="{% url 'admin' %}" class="nav-link"><span>Admin</span></a></li>
+                {% endif %}
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+<div>
+      {% block content%}
+      {% endblock content %}
+
+</div>
+      
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 logo"><span>RFX</span> Academy</h2>
+              <p>“Think of it this way: Once a dollar goes into your asset column,
+               it becomes your employee. The best thing about money is that it works 
+               24 hours a day and can work for generations.”</p>
+               <p>– Robert Kiyosaki</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+				<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+				<li class="ftco-animate"><a href="#"><span class="icon-whatsapp"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        
+         
+          
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  
+  
+  
+  
+  
+   
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> <span><i class="icon-heart color-danger" aria-hidden="true" style="color:blue;"></i>  </span>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'RFX/js/jquery.min.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'RFX/js/popper.min.js' %}"></script>
+  <script src="{% static 'RFX/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'RFX/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'RFX/js/aos.js' %}"></script>
+  <script src="{% static 'RFX/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'RFX/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'RFX/js/google-map.js' %}"></script>
+  
+  <script src="{% static 'RFX/js/main.js' %}"></script>
+    
+  </body>
+</html>

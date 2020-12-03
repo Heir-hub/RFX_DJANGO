@@ -1,0 +1,316 @@
+{% extends 'RFX/base.html' %}
+{% load static %}
+{% block content %}
+
+	  <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/slide_1.jpg' %} );">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class="mb-4">Rehoboth <span>Forex</span> Institute</h1>
+		            <p>...Charting the wealth in you </p>
+					<a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/blue.jpg' %});">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class="mb-4">You Can Create The <span>Life</span> You Desire</h1>
+		           
+		            <p><a href="#" class="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+
+	  
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/Slider_3.jpg' %});">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left ftco-animate mt-5 text-lg-center">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class=" mt-4 mb-4">You Can Be Your Own <span>Boss</span></h1>
+		            
+		            <p><a href="#" class="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about-section " id="about-section">
+    	<div class="container-fluid px-0">
+    		<div class="row d-md-flex text-wrapper">
+					<div class="one-half img" style="background-image: url({% static 'RFX/images/about.jpg' %} ); background-position:center;"></div>
+					<div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
+						<div class="text-inner pl-md-5">
+              <h3 class="heading">Welcome to <span>RFX</span> Institute</h3>
+			  <p><strong>Rehoboth</strong> fx is a mandate that was birth with the<strong> vision</strong> to purposefully reach the world of every 
+				young person as we equip them with a powerful tool of <strong>wealth</strong> creation through trading the foreign exchange markets.</p>
+              <p>Our core values are rooted in building quality relationship with our clients
+				   and providing them expert services that keep them coming back for more.</p>
+				   <p>We are proud to say we have all these qualities  in dealing with our clients:</p>
+              <ul class="my-4">
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span> Transparency</li>
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span>Consistency</li>
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span> Integrity</li>
+              </ul>
+            </div>
+					</div>
+    		</div>
+    	</div>
+    </section>
+
+		
+
+	<section class="ftco-section bg-light ftco-event" id="events-section">
+		<div class="container-fluid px-4 ftco-to-top">
+			<div class="row justify-content-center pb-5">
+	  <div class="col-md-12 heading-section text-center ftco-animate">
+		  <span class="subheading">Our Services</span>
+		<h2 class="mb-5">We Offer:</h2>
+	  </div>
+	</div>
+		
+				
+				<div class="row">
+					<div class="col-md-12 col-lg-6 col-xl-4" >
+        		<div class="event-wrap d-flex ftco-animate mx-auto">
+        			<div class="img img-fluid " style="background-image: url({% static 'RFX/images/fx.jpg' %});  background-position:center;"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time">Forex Trading Tutorials</span>
+	        				<h3><a href="#">Learn To Trade The Foreign Exchange Market</a></h3>
+	        				<div class="meta">
+		        		
+		        			
+		        				<p class="mb-0"><a href="{% url 'aboutfx' %}" class="btn btn-primary">explore</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img img-fluid" style="background-image: url({% static 'RFX/images/account.jpg' %});"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time">Fx Account Management</span>
+	        				<h3><a href="#">Let's help you grow your wealth</a></h3>
+	        				<div class="meta">
+		        		
+		        			
+		        				<p class="mb-0"><a href="https://wa.me/23408163540049?text=%20Hello%20%20sir%20my%20name%20is" class="btn btn-primary">explore</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'RFX/images/cons.jpg' %});"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time">Forex Consult</span>
+	        				<h3><a href="#">Sustaining your wealth is our priority</a></h3>
+	        				<div class="meta">
+		        		
+		        			
+		        				<p class="mb-0"><a href="https://wa.me/23408163540049?text=%20Hello%20%20sir%20my%20name%20is" class="btn btn-primary">explore</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+
+        
+        	<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img" style="background-image: url({% static 'RFX/images/boss.jpg' %});"></div>
+        			<div class="text p-4 d-flex align-itegms-center">
+        				<div>
+	        				<span class="time">Online Seminar</span>
+	        				<h3><a href="#">We are unlimited by space and time!</a></h3>
+	        				<div class="meta">
+		        		
+		        			
+		        				<p class="mb-0"><a href="https://wa.me/23408163540049?text=%20Hello%20%20sir%20my%20name%20is" class="btn btn-primary">explore</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        
+		</section>
+		<section class="ftco-section ftco-causes ftco-no-pb" id="causes-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+					<div class="col-md-12 heading-section text-center ftco-animate">
+						<span class="subheading">Our Goal</span>
+						<h2 class="mb-5">Why we are the leading financial market institute</h2>
+					
+					</div>
+               </div>
+				<div class="row">
+					<div class="col-md-6 col-lg-12" >
+						<div class="cause-entry ftco-animate">
+							<a href="#" class="img" style="background-image: url({% static 'RFX/images/cause-1.jpg' %});height:60vh;"></a>
+							<div class="text p-3">
+								<h3><a href="cause.html">Our Goal</a></h3>
+								<div class="progress mb-4">
+								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="40"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								    <span>40%</span>
+								  	</div>
+								</div>
+							
+								<p>Our Goal is to reach the average young person and raise him/her to be a master of money by being financially intelligent.</p>
+								<p><a href="#" class="btn btn-primary">Learn more</a></p>
+							</div>
+						</div>
+					</div>
+		</section>			
+			
+
+
+
+			
+
+
+<section class="ftco-section contact-section ftco-no-pb " id="contact-section" style="margin-top: -5rem;">
+      <div class="container">
+
+	   <div class="ftco-section ftco-no-pb" id="pastor-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-6 heading-section text-center ftco-animate">
+          	<span class="subheading">Book Appointment</span>
+            <h2 class="mb-4">Book An Appointment.</h2>
+        
+          </div>
+        </div>
+        <div class="row">
+					<div class="col-md-6 col-lg-12 ftco-animate text-center">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-center" >
+								<div class="img align-self-stretch"  style="background-image: url({% static 'RFX/images/ceo.jpg' %});"></div>
+							</div>
+							<div class="text  align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2">Ifedayo Temitope Odeleye</h3>
+									<span class="position mb-4">CEO,Head Coach</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+										<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+										<li class="ftco-animate"><a href="https://www.facebook.com/FxRehoboth"><span class="icon-facebook"></span></a></li>
+										<li class="ftco-animate"><a href="https://www.instagram.com/rehoboth_fx_institute/"><span class="icon-instagram"></span></a></li>
+										<li class="ftco-animate"><a href="https://wa.me/23408163540049?text=%20Hello%20%20sir%20my%20name%20is"><span class="icon-whatsapp"></span></a></li>
+													</ul>
+		                           </div>
+		                       </div>
+							</div>
+						</div>
+					</div>
+			
+       </div>
+
+		
+    </section>
+	
+
+	<section class="ftco-section ftco-causes ftco-no-pb" id="causes-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Testimonials</span>
+					<h2 class="mb-5">Our Clients Say</h2>
+				
+				</div>
+		   </div>
+	</section>	
+	<section class="test-slider js-fullheight owl-carousel">
+		<div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/testimonial.png' %} );">
+			<div class="overlay"></div>
+			  <div class="container">
+				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+					<div class="text">
+						<div class="subheading">
+							<span>RFX Institute Client</span>
+						</div>
+					  <h1 class="mb-4"><span>Adeyanju Ayomide</span> </h1>
+					  <p>I used to consider myself a professional forex trader and I was always bold to tell everyone and anyone this fact. But the hidden fact is that I've been struggling with trading the financial market for over two years now. I've always had issues with keeping a consistent wins. 
+						I would have given up on trading entirely as I had lost so much money over the course of the years, until a friend introduced me to coach Ifedayo. I decided to give it a try, and I'm better for it. My trading system has been entirely revolutionalized with trading the Institutional Order Flow concepts and learning to manage my risks properly. 
+						Thanks for the great impact, coach! </p>
+					 
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+  
+		<div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/testimonial.png' %});">
+			<div class="overlay"></div>
+			  <div class="container">
+				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+					<div class="text">
+						<div class="subheading">
+							<span>RFX Institute Client</span>
+						</div>
+					  <h1 class="mb-4"> <span>Okunnuga Olanrewaju</span></h1>
+					  <p> meeting with coach was the major experience that transformed my trading career. He's style of teaching is top notch. He would carefully analyse over and over with multiple illustrations until you get it. 
+						I recommend Rehoboth FX to anyone who desires to learn the "how-to's" of trading like the banks!
+						Keep being excellent, coach.</p>
+					
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+  
+		
+		<div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/testimonial.png' %});">
+			<div class="overlay"></div>
+			  <div class="container">
+				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-left ftco-animate mt-5 text-lg-center">
+					<div class="text">
+						<div class="subheading">
+							<span>RFX Institute Client</span>
+						</div>
+					  <h1 class=" mt-4 mb-4"> <span>Ayomide Oluwatobi</span></h1>
+					  <p> My first impression about trading was that it would be difficult. I mean with all the lines and the multiply indications I see on my friends' charts! It was damn confusing. 
+						Rehoboth FX has redefined trading for me with their wonderful blend of skill and excellence. I've learnt to trade and understand price action by a simple and concise study of Institutional Order Flow concepts. 
+						Thanks, coach Dee for the invaluable knowledge.</p>
+					
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+	  </section>
+	
+
+{% endblock %}

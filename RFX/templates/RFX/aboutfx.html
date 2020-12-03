@@ -1,0 +1,53 @@
+{% extends 'RFX/base.html' %}
+{% load static %}
+{% block content %}
+
+
+	  <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url({% static 'RFX/images/slide.jpg' %} );">
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-left text-lg-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>RFX Institute</span>
+	          		</div>
+		            <h1 class="mb-4">What is<span> Forex</span> Trading?</h1>
+		           
+					<a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+	            </div>
+	          </div>
+	        </div>
+        </div>
+      </div>
+     </section> 
+
+
+     <section class="ftco-section ftco-causes ftco-no-pb" id="causes-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+					<div class="col-md-12 heading-section text-center ftco-animate">
+						<span class="subheading">Forex</span>
+						<h2 class="mb-5">About The Foreign Exchange Market</h2>
+					
+					</div>
+               </div>
+				<div class="row">
+					<div class="col-md-6 col-lg-12" >
+						<div class="cause-entry ftco-animate">
+							<a href="#" class="img" style="background-image: url({% static 'RFX/images/comment.jpg' %});height:60vh;"></a>
+							<div class="text p-3">
+								<h3><a href="cause.html" style ="margin-bottom:-2rem;">FOREX TRADING</a></h3>
+								<p>The Foreign exchange market is a global market for trading currencies.This market determines
+                                 foreign exchange rate of currencies. It includes all aspect of buying and selling and
+                                  exchanging currencies  at current or determined price</p>
+                                  <P> At Rehoboth Fx Institute, we trade the <strong>Institutional Order Flow</strong>concepts.This enables us to beat the manipulations of the market
+                                  markers. we offer our students same market value as well</p>
+								<p><a href="{% url 'join'%}" class="btn btn-primary">Proceed </a></p>
+							</div>
+						</div>
+					</div>
+		</section>			
+
+ {% endblock content %}    
